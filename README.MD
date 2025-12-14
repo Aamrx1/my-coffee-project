@@ -15,4 +15,4 @@
 
 
 ## 🌐 Активный Проект (GitHub Pages)
-- [Публичная страница на GitHub Pages](https://aamrx1.github.io/my-dpo-project/)
+- [Публичная страница на GitHub Pages](https://aamrx1.github.io/my-coffee-project/)
