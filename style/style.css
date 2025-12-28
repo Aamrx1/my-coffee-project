@@ -1,4 +1,8 @@
-/* 1. Переменные (цвета из макета) */
+html {
+    scroll-behavior: smooth; /* Плавная прокрутка по якорям */
+}
+
+/* Переменные (цвета из макета) */
 :root {
     --color-primary: #415167;    /* Темно-синий текст */
     --color-accent: #C7A17A;     /* Оранжево-коричневый */
@@ -8,14 +12,14 @@
     --font-heading: 'Montserrat', sans-serif;
 }
 
-/* 2. Сброс стилей (Reset) - обязательно для практической */
+/* Сброс стилей (Reset)*/
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* 3. Базовые стили страницы */
+/* Базовые стили страницы */
 body {
     font-family: var(--font-main);
     font-size: 16px;
@@ -38,7 +42,7 @@ ul {
     list-style: none;
 }
 
-/* 4. Типографика */
+/* Типографика */
 h1, h2, h3, h4 {
     font-family: var(--font-heading);
     font-weight: 900; /* Black */
@@ -59,16 +63,15 @@ h1, h2, h3, h4 {
     overflow: hidden;
 }
 
-/* 5. БЭМ Блоки (Базовая стилизация для структуры) */
+/* БЭМ Блоки (Базовая стилизация для структуры) */
 
 /* --- HEADER --- */
 .header {
     padding: 20px 0;
-    /* Здесь позже добавишь фон или выравнивание */
 }
 
 .nav_list {
-    display: flex; /* Выстраиваем меню в ряд */
+    display: flex; 
     gap: 20px;
 }
 
@@ -144,4 +147,41 @@ h1, h2, h3, h4 {
     padding: 20px;
     text-align: center;
     font-size: 14px;
+}
+
+/* --- ИНТЕРАКТИВНОСТЬ --- */
+
+/* Состояния для обычных ссылок в меню */
+.nav_link {
+    transition: color 0.3s ease; /* Плавный переход */
+}
+
+.nav_link:hover {
+    color: var(--color-accent); /* Цвет меняется при наведении */
+}
+
+.nav_link:active {
+    opacity: 0.7; /* Эффект нажатия */
+}
+
+.nav_link:focus {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+}
+
+.button-primary {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-primary:hover {
+    background-color: #b08d6a; /* Чуть темнее при наведении */
+}
+
+.button-primary:active {
+    transform: scale(0.95); /* Уменьшение при клике */
+}
+
+.button-text:hover {
+    text-decoration: underline;
+    color: var(--color-accent);
 }
