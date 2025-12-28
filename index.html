@@ -1,232 +1,178 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рево-кофе</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/style.css">
     <link rel="icon" type="image/png" href="/assets/icon/IC_coffee.png">
 </head>
+
 <body>
-    <header>
-        <h1>Самый вкусный Рево-кофе</h1>
-        <img src="assets/img/banner.png" alt="Баннер главной страницы">
-        <nav>
-            <ul>
-                <li><a href="#">Навигационная ссылка</a></li>
-                <li><a href="#">Навигационная ссылка</a></li>
-                <li><a href="#">Навигационная ссылка</a></li>
-                <li><a href="#">Навигационная ссылка</a></li>
-                <li><a href="#">Навигационная ссылка</a></li>
-            </ul>
-        </nav>
-        <div class="promo-box">
-            <span class="promo-code">MARKETNOW50</span>
+    <header class="header">
+        <div class="header_container">
+            <h1 class="header_title">Самый вкусный Рево-кофе</h1>
+
+            <img class="header_logo" src="assets/img/banner.png" alt="Логотип Revo">
+
+            <nav class="nav">
+                <ul class="nav_list">
+                    <li class="nav_item"><a href="#" class="nav_link">COFFEE</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">PHIN MẠ MÀU</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">COMBO PHIN PHÊ</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">GIFTSET</a></li>
+                    <li class="nav_item"><a href="#" class="nav_link">LIÊN HỆ</a></li>
+                </ul>
+            </nav>
+
+            <div class="promo-box">
+                <span class="promo-box_code">MARKETNOW50</span>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Заголовок 2-го уровня</h2>
-            <div>
-                <article>
-                    <img src="assets/icon/banner.png" alt="Иконка баннер кофейнго магазина">
-                    <h3>Заголовок уровня 3</h3>
-                    <p>Противоположная точка зрения подразумевает, что представители современных социальных резервов, инициированные исключительно синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Каждый из&nbsp;нас понимает очевидную вещь: внедрение современных методик играет важную роль в&nbsp;формировании форм воздействия.</p>
+    <main class="main">
+        <section class="features">
+            <h2 class="features_title visually-hidden">Наши преимущества</h2>
+            <div class="features_grid">
+                <article class="feature-card">
+                    <img class="feature-card_icon" src="assets/icon/banner.png" alt="Источник">
+                    <h3 class="feature-card_title">Nguồn gốc</h3>
+                    <p class="feature-card_text">Những hạt c&agrave;&nbsp;ph&ecirc; Arabica, Robusta đạt chất lượng theo ti&ecirc;u chuẩn quốctế.</p>
                 </article>
-            </div>
 
-            <div>
-                <article>
-                    <img src="assets/icon/CoffeeMachine.png" alt="Иконка кофейная машина">
-                    <h3>Заголовок уровня 3</h3>
-                    <p>Противоположная точка зрения подразумевает, что представители современных социальных резервов, инициированные исключительно синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Каждый из&nbsp;нас понимает очевидную вещь: внедрение современных методик играет важную роль в&nbsp;формировании форм воздействия.</p>
+                <article class="feature-card">
+                    <img class="feature-card_icon" src="assets/icon/CoffeeMachine.png" alt="Качество">
+                    <h3 class="feature-card_title">Chất lượng</h3>
+                    <p class="feature-card_text">Từng hạt c&agrave;&nbsp;ph&ecirc; l&agrave;&nbsp;cả một qu&aacute; tr&igrave;nh tập trung cao độ của nghệ nh&acirc;n c&agrave;ph&ecirc;.</p>
                 </article>
-            </div>
 
-            <div>
-                <article>
-                    <img src="assets/icon/CoffeeShop.png" alt="Иконка кофейный магазин">
-                    <h3>Заголовок уровня 3</h3>
-                    <p>Противоположная точка зрения подразумевает, что представители современных социальных резервов, инициированные исключительно синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Каждый из&nbsp;нас понимает очевидную вещь: внедрение современных методик играет важную роль в&nbsp;формировании форм воздействия.</p>
+                <article class="feature-card">
+                    <img class="feature-card_icon" src="assets/icon/CoffeeShop.png" alt="Виды зерен">
+                    <h3 class="feature-card_title">Các loại hạt</h3>
+                    <p class="feature-card_text">70% chất lượng t&aacute;ch c&agrave;&nbsp;ph&ecirc; đến từ nguồn gốc v&agrave;&nbsp;chất lượng green bean.</p>
                 </article>
-            </div>
 
-            <div>
-                <article>
-                    <img src="assets/icon/cups.png" alt="Иконка кофейные стаканчики">
-                    <h3>Заголовок уровня 3</h3>
-                    <p>Противоположная точка зрения подразумевает, что представители современных социальных резервов, инициированные исключительно синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости, из-за чего возрастает их&nbsp;статус бесполезности. Каждый из&nbsp;нас понимает очевидную вещь: внедрение современных методик играет важную роль в&nbsp;формировании форм воздействия.</p>
+                <article class="feature-card">
+                    <img class="feature-card_icon" src="assets/icon/cups.png" alt="Приготовление">
+                    <h3 class="feature-card_title">Pha chế</h3>
+                    <p class="feature-card_text">Những hạt c&agrave;&nbsp;ph&ecirc; được lột x&aacute;c qua qu&aacute; tr&igrave;nh rang xay kỹ lưỡng v&agrave;nghi&ecirc;m ngặt.</p>
                 </article>
             </div>
         </section>
 
+        <section class="products">
+            <p class="products_subtitle">Choose Your Favorite</p>
+            <h2 class="products_title">CHUẨN GU ĐÚNG VỊ</h2>
 
-        <section>
-            <p>Choose Your Favorite</p>
-            <h2>CHUẨN GU ĐÚNG VỊ</h2>
-            <article>
-                <div>
-                    <img src="assets/img/image4.png" alt="REVO Morning">
-                </div>
-                <div>
-                    <h4>99.000</h4>
-                    <h3>REVO Morning</h3>
-                    <p>самый вкусный кофе на&nbsp;каждое утро</p>
-                </div>
-
-                <div>
-                    <a href="#">MUA NGAY</a>
-                    <a href="#">CHI TIẾT</a>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <img src="assets/img/image1.png" alt="REVO Origin">
-                </div>
-                <div>
-                    <h4>139.000</h4>
-                    <h3>REVO Origin</h3>
-                    <p>самый вкусный кофе на&nbsp;каждое утро</p>
-                </div>
-
-                <div>
-                    <a href="#">MUA NGAY</a>
-                    <a href="#">CHI TIẾT</a>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <img src="assets/img/image2.png" alt="REVO Morning">
-                </div>
-                <div>
-                    <h4>85.000</h4>
-                    <h3>REVO Everyday</h3>
-                    <p>самый вкусный кофе на&nbsp;каждый день</p>
-                </div>
-
-                <div>
-                    <a href="#">MUA NGAY</a>
-                    <a href="#">CHI TIẾT</a>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <img src="assets/img/image3.png" alt="REVO Damda">
-                </div>
-
-                <div>
-                    <h4>75.000</h4>
-                    <h3>REVO Dam da</h3>
-                    <p>самый вкусный кофе на&nbsp;каждый день</p>
-                </div>
-
-                <div>
-                    <a href="#">MUA NGAY</a>
-                    <a href="#">CHI TIẾT</a>
-                </div>
-            </article>
-        </section>
-
-        <section>
-            <p>Best Gift For Best Friend</p>
-            <h2>GIFTSET</h2>
-            <article>
-                <div><img src="assets/img/menu.png" alt="Меню магазина"></div>
-
-                <div>
-                    <h4>285.000</h4>
-                    <h3>Giftset "Cà phê phin Việt Nam"</h3>
-                    <p>Имеется спорная точка зрения, гласящая примерно следующее: интерактивные прототипы освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, ограничены исключительно образом мышления. Каждый из&nbsp;нас понимает очевидную вещь: постоянный количественный рост и&nbsp;сфера нашей активности выявляет срочную потребность форм воздействия. Как уже неоднократно упомянуто, тщательные исследования конкурентов обнародованы.</p>
-                </div>
-
-                <div>
-    
-                    <div>
-                        <img src="assets/icon/IC_coffee.png" alt="Кофейные зерна">
-                        <h4>Loại hạt</h4> 
-                        <p>Fine Robusta Blend</p>
+            <div class="products_list">
+                <article class="product-card">
+                    <div class="product-card_image-wrapper">
+                        <img class="product-card_image" src="assets/img/image4.png" alt="REVO Morning">
                     </div>
-    
-                    <div>
-                        <img src="assets/icon/IC_Mountain.png" alt="Горы">
-                        <h4>Độ cao</h4>
-                        <p>700-800m</p> 
+                    <div class="product-card_info">
+                        <span class="product-card_price">99.000</span>
+                        <h3 class="product-card_name">REVO Morning</h3>
+                        <p class="product-card_description">đắng, hậu ngọt, hương hoa</p>
+                        <div class="product-card_actions">
+                            <a href="#" class="button button-primary">MUA NGAY</a>
+                            <a href="#" class="button button-text">CHI TIẾT</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-card_image-wrapper">
+                        <img class="product-card_image" src="assets/img/image1.png" alt="REVO Origin">
+                    </div>
+                    <div class="product-card_info">
+                        <span class="product-card_price">139.000</span>
+                        <h3 class="product-card_name">REVO Origin</h3>
+                        <p class="product-card_description">hậu ngọt, ít đắng, vị chua dâu</p>
+                        <div class="product-card_actions">
+                            <a href="#" class="button button-primary">MUA NGAY</a>
+                            <a href="#" class="button button-text">CHI TIẾT</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="giftset">
+            <p class="giftset_subtitle">Best Gift For Best Friend</p>
+            <h2 class="giftset_title">GIFTSET</h2>
+
+            <article class="giftset-card">
+                <div class="giftset-card_image-box">
+                    <img src="assets/img/menu.png" alt="Giftset" class="giftset-card_image">
+                </div>
+
+                <div class="giftset-card_content">
+                    <span class="giftset-card_price">285.000</span>
+                    <h3 class="giftset-card_name">Giftset "Cà phê phin Việt Nam"</h3>
+                    <p class="giftset-card_desc">M&oacute;n qu&agrave; tuyệt vời d&agrave;nh cho người s&agrave;nh c&agrave;&nbsp;ph&ecirc;...</p>
+
+                    <div class="giftset-card_specs">
+                        <div class="spec-item">
+                            <img src="assets/icon/IC_coffee.png" alt="" class="spec-item_icon">
+                            <div class="spec-item_text">
+                                <h4 class="spec-item_title">Loại hạt</h4>
+                                <p class="spec-item_value">Fine Robusta Blend</p>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <img src="assets/icon/IC_Mountain.png" alt="" class="spec-item_icon">
+                            <div class="spec-item_text">
+                                <h4 class="spec-item_title">Độ cao</h4>
+                                <p class="spec-item_value">700-800m</p>
+                            </div>
+                        </div>
                     </div>
 
-                </div>
-
-                <div>
-                    <a href="#">MUA NGAY</a>
-                    <a href="#">CHI TIẾT</a>
+                    <div class="giftset-card_actions">
+                        <a href="#" class="button button-primary">MUA NGAY</a>
+                        <a href="#" class="button button-text">CHI TIẾT</a>
+                    </div>
                 </div>
             </article>
         </section>
 
-        <section>
-            <p>Your Personalized Coffee</p>
-            <h2>COMBO PHIN PHÊ</h2>
+        <section class="combo">
+            <p class="combo_subtitle">Your Personalized Coffee</p>
+            <h2 class="combo_title">COMBO PHIN PHÊ</h2>
 
-            <article>
-                <div>
-                    <img src="assets/img/image5.png" alt="REVO-Coffee brown">
-                </div>
-                <div>
-                    <h4>147.000</h4>
-                    <s>155.000</s>
-                    <h3>Combo Revo Đậm Đà</h3>
-                    <p>самый вкусный кофе на&nbsp;каждое утро</p>
-                </div>
-
-                <div>
-                    <a href="#">MUA NGAY</a>
-                    <a href="#">CHI TIẾT</a>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <img src="assets/img/image6.png" alt="REVO-Coffee blue">
-                </div>
-                <div>
-                    <h4>156.000</h4>
-                    <s>165.000</s>
-                    <h3>Combo Revo Everyday</h3>
-                    <p>самый вкусный кофе на&nbsp;каждое день</p>
-                </div>
-
-                <div>
-                    <a href="#">MUA NGAY</a>
-                    <a href="#">CHI TIẾT</a>
-                </div>
-            </article>
-
-            <article>
-                <div>
-                    <img src="assets/img/image7.png" alt="REVO-Coffee red">
-                </div>
-                <div>
-                    <h4>275.000</h4>
-                    <s>260.000</s>
-                    <h3>Combo Revo Honey</h3>
-                    <p>самый вкусный кофелучший подарок для близких</p>
-                </div>
-
-                <div>
-                    <a href="#">MUA NGAY</a>
-                    <a href="#">CHI TIẾT</a>
-                </div>
-            </article>
+            <div class="combo_list">
+                <article class="combo-card">
+                    <img class="combo-card_image" src="assets/img/image5.png" alt="Revo Đậm Đà">
+                    <div class="combo-card_content">
+                        <div class="combo-card_pricing">
+                            <span class="combo-card_price">147.000</span>
+                            <s class="combo-card_old-price">155.000</s>
+                        </div>
+                        <h3 class="combo-card_title">Combo Revo Đậm Đà</h3>
+                        <p class="combo-card_desc">H&agrave;m lượng caffeine trong Revo Đậm Đ&agrave;&nbsp;đủ mạnh...</p>
+                        <div class="combo-card_actions">
+                            <a href="#" class="button button-outline">MUA NGAY</a>
+                            <a href="#" class="button button-text">CHI TIẾT</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
         </section>
 
     </main>
 
-    <footer>
-        <p>&copy;&nbsp;Revo Coffee Việt Nam&nbsp;&mdash; 2018</p>
+    <footer class="footer">
+        <p class="footer_copyright">&copy;&nbsp;Revo Coffee Việt Nam&nbsp;&mdash; 2018</p>
     </footer>
-    
+
 </body>
+
 </html>
