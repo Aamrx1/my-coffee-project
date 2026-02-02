@@ -12,7 +12,7 @@ html {
     --font-heading: 'Montserrat', sans-serif;
 }
 
-/* Сброс стилей (Reset)*/
+/* Сброс стилей (Reset) */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -49,33 +49,34 @@ h1, h2, h3, h4 {
     text-transform: uppercase;
 }
 
-/* Скрываем заголовки, которые нужны для SEO, но не для дизайна */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-}
-
-/* БЭМ Блоки (Базовая стилизация для структуры) */
-
 /* --- HEADER --- */
 .header {
     padding: 20px 0;
 }
 
-.nav_list {
-    display: flex; 
-    gap: 20px;
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav_link {
+.nav__list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        align-content: center;
+        justify-content: space-around;
+        margin-right: 20px;
+    }
+}
+
+.nav__link {
     font-weight: 700;
     font-size: 14px;
 }
@@ -91,17 +92,20 @@ h1, h2, h3, h4 {
     cursor: pointer;
 }
 
-.button-primary {
+/* Модификатор: основной стиль (два тире) */
+.button--primary {
     background-color: var(--color-accent);
     color: white;
 }
 
-.button-text {
+/* Модификатор: только текст (два тире) */
+.button--text {
     background: none;
     color: var(--color-primary);
 }
 
-.button-outline {
+/* Модификатор: контурный стиль (два тире) */
+.button--outline {
     border: 2px solid var(--color-accent);
     color: var(--color-accent);
     border-radius: 20px;
@@ -111,31 +115,84 @@ h1, h2, h3, h4 {
 .features {
     padding: 50px 0;
     text-align: center;
-    background-color: var(--color-bg-light); /* Пример фона из макета */
+    background-color: var(--color-bg-light);
 }
 
 /* Grid сетка для преимуществ */
-.features_grid {
+.features__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     padding: 0 20px;
 }
 
-.feature-card_title {
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-card__title {
     margin: 15px 0 10px;
     font-size: 20px;
 }
 
+/* --- Masonry layout в products__list --- */
+.products__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 10px;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Базовая настройка для всех карточек в сетке */
+.product-card {
+    grid-row: span 20; /* Высота по умолчанию */
+}
+
+/* Делаем каждую вторую карточку выше */
+.product-card:nth-child(2n) {
+    grid-row: span 25;
+}
+
+@media (max-width: 768px) {
+    .products__list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .products__list {
+        /* Переключаем сетку в режим обычных строк, которые подстроятся под контент */
+        grid-auto-rows: min-content; 
+        gap: 20px; /* Убедись, что есть зазор между карточками */
+    }
+
+    .product-card {
+        /* Сбрасываем только span, если они мешают */
+        grid-row: auto !important;
+        margin: 50px;
+    }
+}
+
+
 /* --- SECTIONS HEADERS --- */
-.products_title, .giftset_title, .combo_title {
+.products__title, 
+.giftset__title, 
+.combo__title, 
+.features__title {
     font-size: 30px;
     color: var(--color-primary);
     margin-bottom: 30px;
     text-align: center;
 }
 
-.products_subtitle, .giftset_subtitle, .combo_subtitle {
+.products__subtitle, 
+.giftset__subtitle, 
+.combo__subtitle, 
+.features__subtitle {
     text-align: center;
     font-size: 14px;
     margin-bottom: 10px;
@@ -151,37 +208,38 @@ h1, h2, h3, h4 {
 
 /* --- ИНТЕРАКТИВНОСТЬ --- */
 
-/* Состояния для обычных ссылок в меню */
-.nav_link {
-    transition: color 0.3s ease; /* Плавный переход */
+/* Плавный переход для ссылок */
+.nav__link {
+    transition: color 0.3s ease; 
 }
 
-.nav_link:hover {
-    color: var(--color-accent); /* Цвет меняется при наведении */
+.nav__link:hover {
+    color: var(--color-accent); 
 }
 
-.nav_link:active {
-    opacity: 0.7; /* Эффект нажатия */
+.nav__link:active {
+    opacity: 0.7; 
 }
 
-.nav_link:focus {
+.nav__link:focus {
     outline: 2px solid var(--color-accent);
     outline-offset: 4px;
 }
 
-.button-primary {
+/* Плавный переход для кнопок */
+.button--primary {
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.button-primary:hover {
-    background-color: #b08d6a; /* Чуть темнее при наведении */
+.button--primary:hover {
+    background-color: #b08d6a; 
 }
 
-.button-primary:active {
-    transform: scale(0.95); /* Уменьшение при клике */
+.button--primary:active {
+    transform: scale(0.95); 
 }
 
-.button-text:hover {
+.button--text:hover {
     text-decoration: underline;
     color: var(--color-accent);
 }
